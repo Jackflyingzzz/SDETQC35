@@ -765,7 +765,7 @@ class Env2DCylinderModified(gym.Env):
             if(not os.path.exists("../episode_averages/"+name)):
                 with open("../episode_averages/"+name, "w") as csv_file:
                     spam_writer=csv.writer(csv_file, delimiter=";", lineterminator="\n")
-                    spam_writer.writerow(["Episode", "AvgDrag", "AvgLift", "AvgRecircArea"])
+                    spam_writer.writerow(["Episode", "AvgDrag", "AvgLift", "AvgRecircArea","rewards"])
                     spam_writer.writerow([self.last_episode_number, avg_drag, avg_lift, avg_area])
             else:
                 with open("../episode_averages/"+name, "a") as csv_file:
